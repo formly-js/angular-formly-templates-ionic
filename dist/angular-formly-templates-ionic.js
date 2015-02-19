@@ -49,7 +49,7 @@ angular.module('formlyIonic').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('fields/ion-input.html',
-    "<label class=\"item item-input\"><input ng-model=model[options.key] placeholer={{options.templateOptions.placeholer}} type={{options.templateOptions.type}}></label>"
+    "<label class=\"item item-input\"><input ng-model=model[options.key] placeholder={{options.templateOptions.placeholder}} type={{options.templateOptions.type}}></label>"
   );
 
 
@@ -64,7 +64,7 @@ angular.module('formlyIonic').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('fields/ion-textarea.html',
-    "<label class=\"item item-input\"><textarea placeholder={{options.templateOptions.placeholer}} ng-model=model[options.key]></textarea></label>"
+    "<label class=\"item item-input\"><textarea placeholder={{options.templateOptions.placeholder}} ng-model=model[options.key]></textarea></label>"
   );
 
 
