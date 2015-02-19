@@ -1,1 +1,0 @@
-/Users/mhartington/GithubRepos/angular-formly/angular-formly-templates-ionic/dist/angular-formly-templates-ionic.js
