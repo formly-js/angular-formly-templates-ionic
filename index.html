@@ -30,6 +30,51 @@
           <h3>
               Formly for Angular is an AngularJS module which has directives to help customize and render JavaScript configured forms. The directive originated from a need to allow our users to create surveys and distribute them easily. Buckle up, because angular-formly is very powerful.
           </h3>
+
+<pre>
+  $scope.formFields = [
+    {
+      key: 'text',
+      type: 'input',
+      templateOptions: {
+        type:'text',
+        placeholder: 'Formly is terrific!'
+      }
+    },
+    {
+      key: 'story',
+      type: 'textarea',
+      templateOptions: {
+        placeholder: 'It allows you to build and maintain your forms with the ease of JavaScript :-)'
+      }
+    },
+
+
+    {
+      key: 'toggle',
+      type: 'toggle',
+      templateOptions: {
+        label: 'Remember Me?',
+        toggleClass:"assertive"
+      }
+    }, 
+    {
+      key: 'slider',
+      type: 'range',
+      templateOptions: {
+        label: 'Scale',
+        rangeClass:"calm",
+        min: '0',
+        max: '100',
+        step: '5',
+        value: '25',
+        minIcon:'ion-volume-low',
+        maxIcon:'ion-volume-high'
+
+      }
+    }];
+
+  </pre>
         </div>
         <div class="col-lg-4">
 
