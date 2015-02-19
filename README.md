@@ -2,4 +2,10 @@
 
 # Angular-Formly: Ionic Framework Templates
 
-This is a shell repository for templates for [ionic](http://ionicframework.com/) for [angular-formly](https://github.com/formly-js/angular-formly). Would love for someone to implement this! If you're interested, ping us on [Issue #1](https://github.com/formly-js/angular-formly-templates-ionic/issues/1)
+This is a shell repository for templates for [ionic](http://ionicframework.com/) for [angular-formly](https://github.com/formly-js/angular-formly).
+
+**This is still a work in progress and needs some tests.**
+
+
+### Want to contribute?
+Ping us on [Issue #1](https://github.com/formly-js/angular-formly-templates-ionic/issues/1) or submit or Pull Request

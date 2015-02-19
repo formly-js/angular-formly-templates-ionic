@@ -1,0 +1,9 @@
+<div ng-repeat="(key, option) in options.templateOptions.options" class="radio">
+  <label>
+    <input type="radio"
+           id="{{id + '_'+ $index}}"
+           ng-value="option.value"
+           ng-model="model[options.key]">
+    {{option.name}}
+  </label>
+</div>
