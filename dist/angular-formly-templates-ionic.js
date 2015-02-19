@@ -64,7 +64,7 @@ angular.module('formlyIonic').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('fields/ion-textarea.html',
-    "<label class=\"item item-input\"><textarea placeholder={{::options.placeholer}} ng-model=model[options.key]></textarea></label>"
+    "<label class=\"item item-input\"><textarea placeholder={{options.templateOptions.placeholer}} ng-model=model[options.key]></textarea></label>"
   );
 
 
