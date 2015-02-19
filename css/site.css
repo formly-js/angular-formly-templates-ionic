@@ -8579,7 +8579,7 @@ h2.underline {
   z-index: 1;
   width: 380px;
   height: 810px;
-  background: url("/img/phone-case.png") no-repeat right top;
+  background: url("../img/phone-case.png") no-repeat right top;
   margin-left: 20px;
 }
 
