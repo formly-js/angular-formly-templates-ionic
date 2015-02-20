@@ -44,7 +44,7 @@ angular.module('formlyIonic').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('fields/ion-checkbox.html',
-    "<ion-checkbox ng-model=model[options.key]>{{::options.templateOptions.label}}</ion-checkbox>"
+    "<ion-checkbox ng-model=model[options.key]>{{options.templateOptions.label}}</ion-checkbox>"
   );
 
 
@@ -54,22 +54,22 @@ angular.module('formlyIonic').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('fields/ion-radio.html',
-    "<ion-radio ng-model=model[options.key] ng-value=option.value>{{::options.templateOptions.label}}</ion-radio>"
+    "<ion-radio ng-model=model[options.key] ng-value=option.value>{{options.templateOptions.label}}</ion-radio>"
   );
 
 
   $templateCache.put('fields/ion-range.html',
-    "<div class=\"item range\" ng-class=\"'range-' + options.templateOptions.rangeClass\"><span>{{::options.templateOptions.label}}</span> <i class=icon ng-if=options.templateOptions.minIcon ng-class=\"  options.templateOptions.minIcon\"></i> <input type=range min={{options.templateOptions.min}} max={{options.templateOptions.max}} step={{options.templateOptions.step}} value={{options.templateOptions.value}} ng-model=model[options.key]> <i class=icon ng-if=options.templateOptions.maxIcon ng-class=options.templateOptions.maxIcon></i></div>"
+    "<div class=\"item range\" ng-class=\"'range-' + options.templateOptions.rangeClass\"><span>{{options.templateOptions.label}}</span> <i class=icon ng-if=options.templateOptions.minIcon ng-class=\"  options.templateOptions.minIcon\"></i> <input type=range min={{options.templateOptions.min}} max={{options.templateOptions.max}} step={{options.templateOptions.step}} value={{options.templateOptions.value}} ng-model=model[options.key]> <i class=icon ng-if=options.templateOptions.maxIcon ng-class=options.templateOptions.maxIcon></i></div>"
   );
 
 
   $templateCache.put('fields/ion-textarea.html',
-    "<label class=\"item item-input\"><textarea placeholder={{options.templateOptions.placeholder}} ng-model=model[options.key]></textarea></label>"
+    "<label class=\"item item-input\"><textarea placeholder={{options.templateOptions.placeholder}} ng-model=model[options.key]></textarea><label></label></label>"
   );
 
 
   $templateCache.put('fields/ion-toggle.html',
-    "<ion-toggle ng-model=model[options.key] toggle-class=toggle-{{::options.templateOptions.toggleClass}}>{{::options.templateOptions.label}}</ion-toggle>"
+    "<ion-toggle ng-model=model[options.key] toggle-class=toggle-{{options.templateOptions.toggleClass}}>{{options.templateOptions.label}}</ion-toggle>"
   );
 
 }]);
