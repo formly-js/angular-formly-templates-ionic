@@ -4,7 +4,11 @@
 
 This is a template for Angular-Formly and [Ionic](http://ionicframework.com/). This library is not standalone and requires angular-formly to be present and loaded.
 
+### Install with Bower
 
+```bash
+$ bower install angular-formly angular-formly-templates-ionic --save
+```
 
 ### ToDos
 
