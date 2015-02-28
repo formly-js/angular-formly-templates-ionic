@@ -12,5 +12,6 @@ $ bower install angular-formly angular-formly-templates-ionic --save
 
 ### ToDos
 
-Write tests
-Move to gulp
+- Write tests
+
+- Move to gulp
