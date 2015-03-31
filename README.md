@@ -2,7 +2,7 @@
 
 # Angular-Formly: Ionic Framework Templates
 
-This is a template for Angular-Formly and [Ionic](http://ionicframework.com/). This library is not standalone and requires angular-formly to be present and loaded.
+This is a template for [angular-formly](http://github.com/formly-js/angular-formly) and [Ionic](http://ionicframework.com/). This library is not standalone and requires angular-formly to be present and loaded.
 
 ### Install with Bower
 
