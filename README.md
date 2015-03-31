@@ -7,11 +7,28 @@ This is a template for Angular-Formly and [Ionic](http://ionicframework.com/). T
 ### Install with Bower
 
 ```bash
-$ bower install angular-formly angular-formly-templates-ionic --save
+$ bower install api-check angular-formly angular-formly-templates-ionic --save
 ```
+
+Reference the files in your `index.html`
+
+```html
+<!-- right below ionic.bundle.js -->
+<script src="lib/api-check/dist/apiCheck.js"></script>
+<script src="lib/angular-formly/dist/formly.js"></script>
+<script src="js/angular-formly-templates-ionic.js"></script>
+```
+
+Then import the templates into your project.
+
+```javascript
+angular.module('myApp', ['ionic', 'formlyIonic'])
+```
+
+And your're ready! 
 
 ### ToDos
 
 - Write tests
 
-- Move to gulp
+- [x] Move to gulp
