@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var template = require('gulp-angular-templatecache');
+var template = require('gulp-ng-templates');
 var rename = require('gulp-rename');
 var ngAnnotate = require('gulp-ng-annotate');
 var uglify = require('gulp-uglify');
@@ -17,13 +17,19 @@ var finalName = 'angular-formly-templates-ionic';
 
 
 gulp.task('default', ['build']);
+
+
 gulp.task('template', function() {
-  //Lets build them templates first
-  return gulp.src('src/fields/*.html')
-    .pipe(template(ionicTemplates + ".js", {
-      module: "formlyIonic"
-    }))
-    .pipe(gulp.dest(prebuildDir));
+  return gulp.src('src/fields/*html')
+     //.pipe(htmlmin({collapseWhitespace: true}))
+     .pipe(template({
+         filename: ionicTemplates + ".js",
+         module: 'formlyIonic',
+         path: function (path, base) {
+             return path.replace(base, 'fields/');
+         }
+     }))
+     .pipe(gulp.dest('.tmp'));
 });
 
 // Then save the main provider in the same tmp dir
