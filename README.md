@@ -16,7 +16,7 @@ Reference the files in your `index.html`
 <!-- right below ionic.bundle.js -->
 <script src="lib/api-check/dist/apiCheck.js"></script>
 <script src="lib/angular-formly/dist/formly.js"></script>
-<script src="js/angular-formly-templates-ionic.js"></script>
+<script src="lib/angular-formly-templates-ionic/dist/angular-formly-templates-ionic.js"></script>
 ```
 
 Then import the templates into your project.
@@ -25,7 +25,7 @@ Then import the templates into your project.
 angular.module('myApp', ['ionic', 'formlyIonic'])
 ```
 
-And your're ready! 
+And your're ready!
 
 ### ToDos
 
