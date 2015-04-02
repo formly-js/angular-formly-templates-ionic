@@ -28,8 +28,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.3.14",
-    "angular-formly": "~4.2.5",
+    "angular": ">=1.2.x",
+    "angular-formly": ">=3.0.0"
   },
   "devDependencies": {
     "chai": "~1.9.1",
