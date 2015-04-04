@@ -9,6 +9,7 @@ var git = require('gulp-git');
 var bump = require('gulp-bump');
 var filter = require('gulp-filter');
 var tag_version = require('gulp-tag-version');
+var minifyHtml = require("gulp-minify-html");
 
 //Build Vars
 var ionicTemplates = 'templates-ionic';
@@ -21,15 +22,22 @@ gulp.task('default', ['build']);
 
 gulp.task('template', function() {
   return gulp.src('src/fields/*html')
-     //.pipe(htmlmin({collapseWhitespace: true}))
-     .pipe(template({
-         filename: ionicTemplates + ".js",
-         module: 'formlyIonic',
-         path: function (path, base) {
-             return path.replace(base, 'fields/');
-         }
-     }))
-     .pipe(gulp.dest('.tmp'));
+    //.pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(minifyHtml({
+     empty: false,
+     spare: true,
+     quotes: true
+ }))
+    .pipe(template({
+      filename: ionicTemplates + ".js",
+      module: 'formlyIonic',
+      path: function(path, base) {
+        return path.replace(base, 'fields/');
+      },
+      header: 'angular.module("<%= module %>").run(["$templateCache", function($templateCache) {'
+
+    }))
+    .pipe(gulp.dest('.tmp'));
 });
 
 // Then save the main provider in the same tmp dir
@@ -52,21 +60,29 @@ gulp.task('build', ['template', 'mkSrc'], function() {
 });
 
 function inc(importance) {
-    // get all the files to bump version in
-    return gulp.src(['./package.json', './bower.json'])
-        // bump the version number in those files
-        .pipe(bump({type: importance}))
-        // save it back to filesystem
-        .pipe(gulp.dest('./'))
-        // commit the changed version number
-        .pipe(git.commit('bumps package version'))
+  // get all the files to bump version in
+  return gulp.src(['./package.json', './bower.json'])
+    // bump the version number in those files
+    .pipe(bump({
+      type: importance
+    }))
+    // save it back to filesystem
+    .pipe(gulp.dest('./'))
+    // commit the changed version number
+    .pipe(git.commit('bumps package version'))
 
-        // read only one file to get the version number
-        .pipe(filter('package.json'))
-        // **tag it in the repository**
-        .pipe(tag_version());
+  // read only one file to get the version number
+  .pipe(filter('package.json'))
+    // **tag it in the repository**
+    .pipe(tag_version());
 }
 
-gulp.task('patch', function() { return inc('patch'); });
-gulp.task('minor', function() { return inc('minor'); });
-gulp.task('major', function() { return inc('major'); });
+gulp.task('patch', function() {
+  return inc('patch');
+});
+gulp.task('minor', function() {
+  return inc('minor');
+});
+gulp.task('major', function() {
+  return inc('major');
+});
