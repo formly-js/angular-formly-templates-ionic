@@ -1,6 +1,6 @@
 {
   "name": "angular-formly-templates-ionic",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Astrism <astrisms@gmail.com>",
   "contributors": [
     "Astrism <astrisms@gmail.com>",
@@ -34,6 +34,7 @@
     "gulp-concat": "^2.2.0",
     "gulp-filter": "^2.0.2",
     "gulp-git": "^1.1.0",
+    "gulp-minify-html": "^1.0.2",
     "gulp-ng-annotate": "^0.5.2",
     "gulp-ng-templates": "0.0.5",
     "gulp-rename": "^1.2.0",
