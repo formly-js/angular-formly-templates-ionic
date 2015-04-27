@@ -14,7 +14,7 @@ Reference the files in your `index.html`
 
 ```html
 <!-- right below ionic.bundle.js -->
-<script src="lib/api-check/dist/apiCheck.js"></script>
+<script src="lib/api-check/dist/api-check.js"></script>
 <script src="lib/angular-formly/dist/formly.js"></script>
 <script src="lib/angular-formly-templates-ionic/dist/angular-formly-templates-ionic.js"></script>
 ```
