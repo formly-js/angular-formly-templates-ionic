@@ -1,4 +1,3 @@
-<select
-    ng-model="model[options.key]"
-      ng-options="option[to.valueProp || 'value'] as option[to.labelProp || 'name'] group by option[to.groupProp || 'group'] for option in to.options">
-</select>
+<in-radio ng-repeat="item in options.templateOptions.options" icon="{{item.icon? item.icon: 'ion-checkmark'}}" ng-value="item.value" ng-model="model[options.key]">
+  {{ item.text }}
+  </ion-radio>
