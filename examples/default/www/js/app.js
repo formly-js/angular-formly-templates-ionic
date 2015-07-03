@@ -36,6 +36,13 @@ angular.module('starter', ['ionic', 'formly', 'formlyIonic'])
         placeholder: 'Password'
       }
     }, {
+      key: 'myStory',
+      type: 'textarea',
+      templateOptions: {
+        placeholder: 'My story',
+        rows: 5
+      }
+    }, {
       key: 'remember',
       type: 'range',
       templateOptions: {
@@ -45,8 +52,8 @@ angular.module('starter', ['ionic', 'formly', 'formlyIonic'])
         max: '100',
         step: '5',
         value: '25',
-        minIcon:'ion-volume-low',
-        maxIcon:'ion-volume-high'
+        minIcon: 'ion-volume-low',
+        maxIcon: 'ion-volume-high'
       }
     }
 

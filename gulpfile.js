@@ -24,10 +24,10 @@ gulp.task('template', function() {
   return gulp.src('src/fields/*html')
     //.pipe(htmlmin({collapseWhitespace: true}))
     .pipe(minifyHtml({
-     empty: false,
-     spare: true,
-     quotes: true
- }))
+      empty: false,
+      spare: true,
+      quotes: true
+    }))
     .pipe(template({
       filename: ionicTemplates + ".js",
       module: 'formlyIonic',
@@ -77,12 +77,12 @@ function inc(importance) {
     .pipe(tag_version());
 }
 
-gulp.task('patch', function() {
+gulp.task('patch', ['build'], function() {
   return inc('patch');
 });
-gulp.task('minor', function() {
+gulp.task('minor', ['build'], function() {
   return inc('minor');
 });
-gulp.task('major', function() {
+gulp.task('major', ['build'], function() {
   return inc('major');
 });

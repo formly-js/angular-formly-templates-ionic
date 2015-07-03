@@ -295,25 +295,51 @@ ion-tabs {
     .tab-item{
       background: transparent;
       // animate the top bar, leave bottom for platform consistency
-      -webkit-transition: all .1s ease;
-      -moz-transition: all .1s ease;
-      -ms-transition: all .1s ease;
-      -o-transition: all .1s ease;
-      transition: all .1s ease;
+      -webkit-transition: color .1s ease;
+      -moz-transition: color .1s ease;
+      -ms-transition: color .1s ease;
+      -o-transition: color .1s ease;
+      transition: color .1s ease;
       &.tab-item-active,
       &.active,
       &.activated {
-        margin-top: 0;
-        margin-bottom: -$tabs-striped-border-width;
+        margin-top: $tabs-striped-border-width - 1px;
         border-width: 0px 0px $tabs-striped-border-width 0px !important;
         border-style: solid;
+        > .badge, > i{
+          margin-top: -$tabs-striped-border-width + 1px;
+        }
       }
       .badge{
-        -webkit-transition: all .2s ease;
-        -moz-transition: all .2s ease;
-        -ms-transition: all .2s ease;
-        -o-transition: all .2s ease;
-        transition: all .2s ease;
+        -webkit-transition: color .2s ease;
+        -moz-transition: color .2s ease;
+        -ms-transition: color .2s ease;
+        -o-transition: color .2s ease;
+        transition: color .2s ease;
+      }
+    }
+   &:not(.tabs-icon-left):not(.tabs-icon-top){
+       .tab-item{
+          &.tab-item-active,
+          &.active,
+          &.activated {
+             .tab-title, i{
+            display:block;
+            margin-top: -$tabs-striped-border-width + 1px;
+          }
+        }
+      }
+    }
+    &.tabs-icon-left{
+       .tab-item{
+          margin-top: 1px;
+          &.tab-item-active,
+          &.active,
+          &.activated {
+            .tab-title, i {
+              margin-top: -0.1em;
+          }
+        }
       }
     }
   }
@@ -396,7 +422,7 @@ ion-tabs {
 .tabs-icon-right > .tabs .tab-item {
   font-size: $tabs-text-font-size-side-icon;
 
-  .icon {
+  .icon, .tab-title {
     display: inline-block;
     vertical-align: top;
     margin-top: -.1em;
@@ -492,3 +518,4 @@ ion-tabs {
   cursor: default;
   pointer-events: none;
 }
+
