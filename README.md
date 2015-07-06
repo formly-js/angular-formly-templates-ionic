@@ -36,11 +36,11 @@ See [angular-formly](http://docs.angular-formly.com) for formly core documentati
 NOTE: All of these properties will be under the `templateOptions` property as of angular-formly 3.0.0
 
 ---
---##### label (string)
+##### label (string)
 >`label` is used to add an html label to each field.
 
 ###### Default
->`undefined`--
+>`undefined`
 
 ---
 ##### required (boolean)
@@ -99,7 +99,7 @@ _Example text field_
   "type": "input",
   "key": "firstName",
   "templateOptions": {
-    "type": "email", // or url, or text, or password, etc.
+    "type": "email", "// or url, or text, or password, etc."
     "placeholder": "jane doe"
   }
 }
@@ -146,17 +146,17 @@ _Example checkbox field_
 _Example range field_
 ```json
 {
-      key: 'volumeLevel',
-      type: 'range',
-      templateOptions: {
-        label: 'Volume',
-        rangeClass: 'calm',
-        min: '0',
-        max: '100',
-        step: '5',
-        value: '25',
-        minIcon: 'ion-volume-low',
-        maxIcon: 'ion-volume-high'
+      "key": "volumeLevel",
+      "type": "range",
+      "templateOptions": {
+        "label": "Volume",
+        "rangeClass": "calm",
+        "min": "0",
+        "max": "100",
+        "step": "5",
+        "value": "25",
+        "minIcon": "ion-volume-low",
+        "maxIcon": "ion-volume-high"
       }
     }
 ```
@@ -176,16 +176,16 @@ _Example radio field_
   "type": "radio",
   "templateOptions": {
     "label": "Have you tried EmberJs yet?",
-     options: [{
-         value: 'a',
-         text: 'A',
-         icon: 'ion-home'
+     "options": [{
+         "value": "A",
+         "text": "A",
+         "icon": "ion-home"
        }, {
-         value: 'B',
-         text: 'B',
+         "value": "B",
+         "text": "B",
        }, {
-         value: 'C',
-         text: 'C',
+         "value": "C',
+         "text": "C",
        }]
   }
 }
@@ -212,34 +212,34 @@ _Example radio field_
 _Example select field_
 ```json
 {
-    key: 'marvel3',
-    type: 'select',
-    templateOptions: {
-      label: 'Select with custom name/value/group',
-      options: [{
-        label: 'Iron Man',
-        id: 'iron_man',
-        gender: 'Male'
+    "key": 'marvel3',
+    "type": 'select',
+    "templateOptions": {
+      "label": "Select with custom name/value/group",
+      "options": [{
+        "label": "Iron Man",
+        "id": "iron_man",
+        "gender": "Male"
       }, {
-        label: 'Captain America',
-        id: 'captain_america',
-        gender: 'Male'
+        "label": "Captain America",
+        "id": "captain_america",
+        "gender": "Male"
       }, {
-        label: 'Black Widow',
-        id: 'black_widow',
-        gender: 'Female'
+        "label": "Black Widow",
+        "id": "black_widow",
+        "gender": "Female"
       }, {
-        label: 'Hulk',
-        id: 'hulk',
-        gender: 'Male'
+        "label": "Hulk",
+        "id": "hulk",
+        "gender": "Male"
       }, {
-        label: 'Captain Marvel',
-        id: 'captain_marvel',
-        gender: 'Female'
+        "label": "Captain Marvel",
+        "id": "captain_marvel",
+        "gender": "Female"
       }],
-      groupProp: 'gender',
-      valueProp: 'id',
-      labelProp: 'label'
+      "groupProp": "gender",
+      "valueProp": "id",
+      "labelProp": "label"
     }
   }
 ```
