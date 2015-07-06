@@ -91,7 +91,7 @@ NOTE: All of these properties will be under the `templateOptions` property as of
 Below is a detailed description of each form fields and its custom properties.
 
 #### Input form field
->The input uses the <input> element and allows you to specify it's type via the type property. Currently Ionic template does not support label on input type, use placeholder instead.
+>The input uses the <input> element and allows you to specify it's type via the type property. Currently Ionic template does not support label on input type, use placeholder instead. the 'type' property inside of templateOptions can be text, email, password, etc..
 
 _Example text field_
 ```json
@@ -99,7 +99,7 @@ _Example text field_
   "type": "input",
   "key": "firstName",
   "templateOptions": {
-    "type": "email", "// or url, or text, or password, etc."
+    "type": "email",
     "placeholder": "jane doe"
   }
 }
@@ -184,7 +184,7 @@ _Example radio field_
          "value": "B",
          "text": "B",
        }, {
-         "value": "C',
+         "value": "C",
          "text": "C",
        }]
   }
@@ -212,8 +212,8 @@ _Example radio field_
 _Example select field_
 ```json
 {
-    "key": 'marvel3',
-    "type": 'select',
+    "key": "marvel3",
+    "type": "select",
     "templateOptions": {
       "label": "Select with custom name/value/group",
       "options": [{
