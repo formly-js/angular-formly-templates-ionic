@@ -100,7 +100,9 @@ _Example text field_
   "key": "firstName",
   "templateOptions": {
     "type": "email",
-    "placeholder": "jane doe"
+    "placeholder": "jane doe",
+    "icon": "ion-person",
+    "iconPlaceholder": true
   }
 }
 ```
