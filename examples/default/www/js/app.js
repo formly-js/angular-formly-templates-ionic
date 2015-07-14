@@ -26,14 +26,16 @@ angular.module('starter', ['ionic', 'formly', 'formlyIonic'])
       type: 'input',
       templateOptions: {
         type: 'text',
-        placeholder: 'johndoe',
+        placeholder: 'johndoe'
       }
     }, {
       key: 'password',
       type: 'input',
       templateOptions: {
         type: 'password',
-        placeholder: 'Password'
+        placeholder: 'Password',
+        icon: 'ion-lock-combination',
+        iconPlaceholder: true
       }
     }, {
       key: 'myStory',
