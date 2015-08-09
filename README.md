@@ -90,8 +90,8 @@ NOTE: All of these properties will be under the `templateOptions` property as of
 
 Below is a detailed description of each form fields and its custom properties.
 
-#### Input form field
->The input uses the <input> element and allows you to specify it's type via the type property. Currently Ionic template does not support label on input type, use placeholder instead. the 'type' property inside of templateOptions can be text, email, password, etc..
+#### Input form field (with Placeholder labels)
+>Uses the placeholder attribute to simulate the input's label. The input uses the <input> element and allows you to specify it's type via the type property. The 'type' property inside of templateOptions can be text, email, password, etc..
 
 _Example text field_
 ```json
@@ -99,12 +99,82 @@ _Example text field_
   "type": "input",
   "key": "firstName",
   "templateOptions": {
-    "type": "email",
-    "placeholder": "jane doe",
-    "icon": "ion-person",
-    "iconPlaceholder": true
+    "type": "text",
+    "placeholder": "jane doe"
   }
 }
+```
+
+---
+
+#### Input form field (with Stacked labels)
+>Stacked labels always places the label on top of the input. The input uses the <input> element and allows you to specify it's type via the type property. The 'type' property inside of templateOptions can be text, email, password, etc..
+
+_Example text field_
+```json
+  vm.userFields = [
+                {
+                    key: 'fname',
+                    type: 'stacked-input',
+                    templateOptions: {
+                        type: 'text',
+                        label: 'First Name',
+                        placeholder: 'First Name'
+                    }
+                }, {
+                    key: 'lname',
+                    type: 'stacked-input',
+                    templateOptions: {
+                        type: 'text',
+                        label: 'Last Name',
+                        placeholder: 'Last Name'
+                    }
+                }, {
+                    key: 'email',
+                    type: 'stacked-input',
+                    templateOptions: {
+                        type: 'email',
+                        label: 'Email',
+                        placeholder: 'Email'
+                    }
+                }
+            ]
+```
+
+---
+
+#### Input form field (with Floating labels)
+>Floating labels are just like Stacked Labels, except that their labels animate, or "float" up when text is entered in the input. The input uses the <input> element and allows you to specify it's type via the type property. The 'type' property inside of templateOptions can be text, email, password, etc..
+
+_Example text field_
+```json
+ vm.userFields = [
+                {
+                    key: 'fname',
+                    type: 'floating-input',
+                    templateOptions: {
+                        type: 'text',
+                        label: 'First Name',
+                        placeholder: 'First Name'
+                    }
+                }, {
+                    key: 'lname',
+                    type: 'floating-input',
+                    templateOptions: {
+                        type: 'text',
+                        label: 'Last Name',
+                        placeholder: 'Last Name'
+                    }
+                }, {
+                    key: 'email',
+                    type: 'floating-input',
+                    templateOptions: {
+                        type: 'email',
+                        label: 'Email',
+                        placeholder: 'Email'
+                    }
+                }
+            ]
 ```
 
 ---
