@@ -2,7 +2,7 @@ angular.module('formlyIonic', ['formly'], function configFormlyIonic(formlyConfi
   'use strict';
 
 
-  angular.forEach(['checkbox','input','radio', 'range','textarea','toggle','select'], function(fieldName) {
+  angular.forEach(['checkbox','input','radio', 'range','textarea','toggle','select','floating-input', 'stacked-input'], function(fieldName) {
     formlyConfigProvider.setType({
       name: fieldName,
       templateUrl: getFieldTemplateUrl(fieldName),

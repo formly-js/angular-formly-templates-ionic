@@ -1,0 +1,37 @@
+{
+  "name": "angular-formly-templates-vanilla",
+  "version": "3.0.1",
+  "authors": [
+    "Astrism <astrisms@gmail.com>"
+  ],
+  "contributors": [
+    "Astrism <astrisms@gmail.com>",
+    "Kent C. Dodds <kent@doddsfamily.us>"
+  ],
+  "main": "dist/angular-formly-templates-vanilla.js",
+  "description": "Angular-Formly plugin which outputs plain html form fields.",
+  "keywords": [
+    "AngularJs",
+    "form",
+    "formly",
+    "json",
+    "vanilla",
+    "html"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.22",
+    "angular-formly": "~1.0.0"
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "mocha": "~1.21.4"
+  }
+}
