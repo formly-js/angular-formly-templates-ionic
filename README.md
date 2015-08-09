@@ -25,7 +25,7 @@ Then import the templates into your project.
 angular.module("myApp", ["ionic", "formlyIonic"])
 ```
 
-And your"re ready!
+And your're ready!
 
 ## Documentation
 
@@ -105,6 +105,31 @@ _Example text field_
     "iconPlaceholder": true
   }
 }
+```
+
+---
+#### Input form field (with Inline labels)
+>Places a label to the left of the input element. When the user enters text the label does not hide. Note that there's nothing stopping you from also using a placeholder label too. Uses the placeholder attribute to simulate the input"s label. The input uses the `<input>` element and allows you to specify it"s type via the type property. The "type" property inside of templateOptions can be text, email, password, etc..
+
+_Example text field_
+```json
+ vm.userFields = [
+                {
+                    "key": "username",
+                    "type": "inline-input",
+                    "templateOptions": {
+                        "type": "text",
+                        "label": "Username"
+                    }
+                }, {
+                    "key": "password",
+                    "type": "inline-input",
+                    "templateOptions": {
+                        "type": "password",
+                        "label": "Password"
+                    }
+                }
+            ];
 ```
 
 ---
