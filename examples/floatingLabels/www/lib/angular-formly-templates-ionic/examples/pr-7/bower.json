@@ -1,0 +1,11 @@
+{
+  "name": "pr-7",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.0.0-rc.2"
+  },
+  "dependencies": {
+    "api-check": "~6.0.11",
+    "angular-formly": "~4.2.5"
+  }
+}
