@@ -25,7 +25,15 @@
   "description": "Angular-Formly plugin which outputs plain html form fields.",
   "peerDependencies": {
     "angular": "^1.x",
-    "angular-formly": ">=3.0.0"
+    "angular-formly": ">=3.0.0",
+    "api-check": ">=7.5.0",
+    "ionic-sdk": "^1.0.0"
+  },
+  "dependencies": {
+    "angular": "^1.x",
+    "angular-formly": ">=3.0.0",
+    "api-check": ">=7.5.0",
+    "ionic-sdk": "^1.0.0"
   },
   "devDependencies": {
     "bower": "^1.3.3",

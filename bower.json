@@ -30,7 +30,8 @@
   ],
   "dependencies": {
     "angular": ">=1.2.x",
-    "angular-formly": ">=3.0.0"
+    "angular-formly": ">=3.0.0",
+    "ionic": ">=1.0.0"
   },
   "devDependencies": {
     "chai": "~1.9.1",
