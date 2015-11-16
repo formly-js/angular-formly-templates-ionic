@@ -1,3 +1,8 @@
-<ion-radio ng-repeat="item in options.templateOptions.options" icon="{{item.icon? item.icon: 'ion-checkmark'}}" ng-value="item.value" ng-model="model[options.key]">
+<ion-radio ng-repeat="item in options.templateOptions.options" icon="{{item.icon? item.icon: 'ion-checkmark'}}" ng-value="item.value"
+           ng-model="model[options.key]"
+           formly-dynamic-name="id"
+           formly-custom-validation="options.validators"
+           ng-required="options.templateOptions.required"
+           ng-disabled="options.templateOptions.disabled">
   {{ item.text }}
 </ion-radio>

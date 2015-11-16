@@ -1,4 +1,10 @@
 <label class="item item-input">
   <i class="icon {{options.templateOptions.icon}}" ng-if="options.templateOptions.icon" ng-class="{'placeholder-icon': options.templateOptions.iconPlaceholder}"></i>
-  <input ng-model="model[options.key]" placeholder="{{options.templateOptions.placeholder}}" type="{{options.templateOptions.type}}">
+  <input ng-model="model[options.key]"
+         type="{{options.templateOptions.type}}"
+         formly-dynamic-name="id"
+         formly-custom-validation="options.validators"
+         placeholder="{{options.templateOptions.placeholder}}"
+         ng-required="options.templateOptions.required"
+         ng-disabled="options.templateOptions.disabled">
 </label>

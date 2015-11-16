@@ -2,7 +2,11 @@
   <div class="input-label">
     {{to.label}}
   </div>
-  <select ng-model="model[options.key]" 
+  <select ng-model="model[options.key]"
+          formly-dynamic-name="id"
+          formly-custom-validation="options.validators"
+          ng-required="options.templateOptions.required"
+          ng-disabled="options.templateOptions.disabled"
           ng-options="option[to.valueProp || 'value'] as option[to.labelProp || 'name'] group by option[to.groupProp || 'group'] for option in to.options">
   </select>
 
