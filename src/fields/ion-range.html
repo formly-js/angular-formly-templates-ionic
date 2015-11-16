@@ -3,7 +3,10 @@
     {{options.templateOptions.label}}
   </span>
   <i class="icon" ng-if="options.templateOptions.minIcon" ng-class="  options.templateOptions.minIcon"></i>
-  <input type="range" min="{{options.templateOptions.min}}" max="{{options.templateOptions.max}}" step="{{options.templateOptions.step}}" value="{{options.templateOptions.value}}" ng-model="model[options.key]">
+  <input type="range" min="{{options.templateOptions.min}}" max="{{options.templateOptions.max}}" step="{{options.templateOptions.step}}" value="{{options.templateOptions.value}}"
+         ng-model="model[options.key]"
+         formly-dynamic-name="id"
+         ng-disabled="options.templateOptions.disabled">
   <i class="icon" ng-if="options.templateOptions.maxIcon" ng-class="options.templateOptions.maxIcon">
     </i>
 </div>

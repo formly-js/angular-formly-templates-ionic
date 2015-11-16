@@ -1,3 +1,7 @@
-<ion-checkbox ng-model="model[options.key]">
+<ion-checkbox ng-model="model[options.key]"
+              formly-dynamic-name="id"
+              formly-custom-validation="options.validators"
+              ng-required="options.templateOptions.required"
+              ng-disabled="options.templateOptions.disabled">
   {{options.templateOptions.label}}
 </ion-checkbox>
