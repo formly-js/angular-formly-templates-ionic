@@ -343,6 +343,67 @@ _Example select field_
   }
 ```
 
+---
+#### Date form field
+>The date field allows date input with a input element set to `type="date"`. It requires ion-datetime-picker from https://github.com/katemihalikova/ion-datetime-picker
+
+
+# Installation of ion-datetime-picker
+
+1. Use bower to install the new module:
+```bash
+bower install ion-datetime-picker --save
+```
+2. Import the `ion-datetime-picker` javascript and css file into your HTML file (or use [wiredep](https://github.com/taptapship/wiredep)):
+```html
+<script src="lib/ion-datetime-picker/release/ion-datetime-picker.min.js"></script>
+<link href="lib/ion-datetime-picker/release/ion-datetime-picker.min.css" rel="stylesheet">
+```
+3. Add `ion-datetime-picker` as a dependency on your Ionic app:
+```javascript
+angular.module("myApp", ["ionic", "ion-datetime-picker"]);
+```
+
+## Configuration attributes
+
+##### dateFormat (string, optional)
+>`dateFormat` is what is used to format the date. Defaults to `MMM dd, yyyy`
+
+##### `date` and `time` attributes
+
+Choose which picker type is used. When neither is set, It assumes both and use the datetime picker.
+
+##### `mondayFirst` attribute
+
+Set this if you want to have Monday as the first day of a week.
+
+##### `seconds` attribute
+
+By default, in the time picker, It allow to change only hours and minutes. Set this attribute to use also seconds.
+
+##### `amPm` attribute
+
+By default, in the time picker, I use 24-hour clock. Set this attribute to change it to 12-hour clock.
+
+
+_Example date field_
+```json
+{
+  "key": "datetime",
+  "type": "date",
+  "templateOptions": {
+    "dateFormat": "yyyy-MM-dd hh:mm a",
+    "label": "Date",
+    "date": true,
+    "time": true,
+    "mondayFirst": true,
+    "seconds": false,
+    "amPm": true,
+    "icon":"ion-ios-calendar-outline"
+  }
+}
+```
+
 ### ToDos
 
 - Write tests

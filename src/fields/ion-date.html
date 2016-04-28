@@ -1,0 +1,5 @@
+<label class="item item-input item-icon-right" ion-datetime-picker  date="{{options.templateOptions.date}}" time="{{options.templateOptions.time}}" seconds="{{options.templateOptions.seconds}}" am-pm="{{options.templateOptions.amPm}}" monday-first="{{options.templateOptions.mondayFirst}}" ng-model="model[options.key]">
+  <span class="input-label">{{options.templateOptions.label}}</span>
+  {{ model[options.key] | date : to.dateFormat }}
+  <i class="icon {{options.templateOptions.icon}}"></i>
+</label>
